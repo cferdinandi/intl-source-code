@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Intl.DateTimeFormat Instance Methods</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Create an Intl.DateTimeFormat object
+			let formatter = new Intl.DateTimeFormat('en-US', {
+				dateStyle: 'medium',
+				timeStyle: 'short'
+			});
+
+			// Create a Date object
+			let date = new Date('2023-10-31T22:00:00');
+
+
+			// Format a Date to a string
+			let halloween = formatter.format(date);
+			console.log(halloween);
+
+			// Format a Date to an array
+			let halloweenToParts = formatter.formatToParts(date);
+			console.log(halloweenToParts);
+
+
+			// Format two Dates to a string
+			let halloweenParty = new Date('2023-10-31T22:00:00');
+			let newYearsEve = new Date('2023-12-31T11:59:59');
+			let dateRange = formatter.formatRange(halloweenParty, newYearsEve);
+			console.log(dateRange);
+
+			// Format two numbers to a string
+			let dateRangeToParts = formatter.formatRangeToParts(halloweenParty, newYearsEve);
+			console.log(dateRangeToParts);
+		</script>
+	</body>
+</html>

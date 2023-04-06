@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Intl.RelativeTimeFormat Instance Methods</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Create an Intl.RelativeTimeFormat object
+			let formatter = new Intl.RelativeTimeFormat('en-US', {
+				style: 'long'
+			});
+
+			// Format a number to a relative time string
+			let str = formatter.format(1, "week");
+			console.log(str);
+
+			// Format a number to an array
+			let arr = formatter.formatToParts(1, "week");
+			console.log(arr);
+		</script>
+	</body>
+</html>

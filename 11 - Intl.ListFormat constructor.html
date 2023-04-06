@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Intl.ListFormat Constructor</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Define how the list should be formatted
+			let formatter = new Intl.ListFormat('en-US', {
+
+				// How the list should be formatted (with or without separators and conjunctions)
+				// 'long' (default - "A, B, and C"), 'short' ("A, B, C"), 'narrow' ("A B C")
+				style: 'long',
+
+				// The type of grouping
+				// 'conjunction' (and-groups), 'disjunction' (or-groups), 'unit' (neither)
+				type: 'conjunction'
+
+			});
+		</script>
+	</body>
+</html>

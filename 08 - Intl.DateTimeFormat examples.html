@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Intl.DateTimeFormat Examples</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Create a Date Object
+			let now = new Date();
+
+			// Get just the date string from a Date object
+			let dateStr = new Intl.DateTimeFormat('en-US', {
+				dateStyle: 'full'
+			}).format(now);
+			console.log(dateStr);
+
+			// Get a short localized date
+			let shortDateStr = new Intl.DateTimeFormat('en-US', {
+				dateStyle: 'short'
+			}).format(now);
+			console.log(shortDateStr);
+
+			// Get just the time string from a Date object
+			let time = new Intl.DateTimeFormat('en-US', {
+				timeStyle: 'short'
+			}).format(now);
+			console.log(time);
+
+			// Get the day of the week from a Date object
+			let weekday = new Intl.DateTimeFormat('en-US', {
+				weekday: 'long'
+			}).format(now);
+			console.log(weekday);
+
+			// Tightly control the output
+			let str = new Intl.DateTimeFormat('en-US', {
+				hour12: true,
+				dayPeriod: 'long',
+				weekday: 'long',
+				month: 'long',
+				day: 'numeric'
+			}).format(now);
+			console.log(str);
+		</script>
+	</body>
+</html>

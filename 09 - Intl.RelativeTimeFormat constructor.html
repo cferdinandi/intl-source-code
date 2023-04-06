@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Intl.RelativeTimeFormat Constructor</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Define how the Date should be formatted
+			let formatter = new Intl.RelativeTimeFormat('en-US', {
+
+				// The length of the message
+				// 'long' ("in 3 months"), 'short' ("in 3 mo."), or 'narrow' ("in 3mo")
+				style: 'long',
+
+				// If 'auto', will use non-numeric language when appropriate
+				// Example "yesterday" instead of "1 day ago"
+				// 'always' (default) or 'auto'
+				numeric: 'always'
+
+			});
+		</script>
+	</body>
+</html>

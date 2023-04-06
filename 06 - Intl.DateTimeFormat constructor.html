@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Intl.DateTimeFormat Constructor</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Define how the Date should be formatted
+			let formatter = new Intl.DateTimeFormat('en-US', {
+
+				// The formatting style to use for the date
+				// Can be used with timeStyle, but not with other options
+				// 'full' (default), 'long', 'medium', 'short'
+				dateStyle: 'full',
+
+				// The formatting style to use for the time
+				// Can be used with dateStyle, but not with other options
+				// 'full' (default), 'long', 'medium', 'short'
+				timeStyle: 'full',
+
+				// If true, use 12-hour clock
+				// Default is locale dependent
+				hour12: true,
+
+				// How to format the time of day (am, morning, etc.)
+				// Only works if a 12-hour clock is used
+				// 'narrow', 'short', or 'long'
+				dayPeriod: 'narrow',
+
+				// How to format the day of the week
+				// 'long' ("Thursday"), 'short' ("Thu"), 'narrow' ("T")
+				weekday: 'long',
+
+				// How to format the era
+				// 'long' ("Anno Domini"), 'short' ("AD"), 'narrow' ("A")
+				era: 'short',
+
+				// How to format the year
+				// 'numeric' ("2023"), '2-digit' ("23")
+				year: 'numeric',
+
+				// How to format the month
+				// 'numeric' ("3"), '2-digit' ("03"), 'long' ("March"), 'short' ("Mar"), 'narrow' ("M")
+				month: 'long',
+
+				// How to format the day of the month
+				// 'numeric' ("1"), '2-digit' ("01")
+				day: 'numeric',
+
+				// How to format the hour of day
+				// 'numeric', '2-digit'
+				hour: 'numeric',
+
+				// How to format the minutes
+				// 'numeric', '2-digit'
+				minute: 'numeric',
+
+				// How to format the seconds
+				// 'numeric', '2-digit'
+				second: 'numeric',
+
+				// Number of digits to include for fractions of second
+				// 0 to 3
+				fractionalSecondDigits: 0,
+
+				// How to format the timezone
+				// 'long' ("Eastern Standard Time"), 'short' ("EST"), 'shortOffset' ("GMT-5"), 'longOffset' ("GMT-0500"), 'shortGeneric' ("ET"), 'longGeneric' ("Eastern Time")
+				timeZoneName: 'short'
+
+			});
+		</script>
+	</body>
+</html>

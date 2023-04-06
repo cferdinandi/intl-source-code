@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Intl.NumberFormat Instance Methods</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Create an Intl.NumberFormat object
+			let formatter = new Intl.NumberFormat('en-US', {
+				style: 'currency',
+				currency: 'USD'
+			});
+
+
+			// Format a number to a string
+			let price = formatter.format(42);
+			console.log(price);
+
+			// Format a number to an array
+			let priceToParts = formatter.formatToParts(42);
+			console.log(priceToParts);
+
+
+			// Format two numbers to a string
+			let priceRange = formatter.formatRange(42, 179);
+			console.log(priceRange);
+
+			// Format two numbers to a string
+			let priceRangeToParts = formatter.formatRangeToParts(42, 179);
+			console.log(priceRangeToParts);
+		</script>
+	</body>
+</html>

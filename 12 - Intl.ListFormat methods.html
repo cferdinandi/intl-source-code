@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Intl.ListFormat Methods</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Create an Intl.ListFormat object
+			let formatter = new Intl.ListFormat('en-US');
+
+			// A list of items
+			let shoppingList = ['wand', 'spell book', 'frog'];
+
+			// Format list to a string
+			let str = formatter.format(shoppingList);
+			console.log(str);
+
+			// Format a number to an array
+			let arr = formatter.formatToParts(shoppingList);
+			console.log(arr);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Intl.NumberFormat Examples</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Format a number to currency
+			let price = new Intl.NumberFormat('en-US', {
+				style: 'currency',
+				currency: 'USD'
+			}).format(42);
+			console.log(price);
+
+			// Format a number to currency without decimals
+			let priceWholeNumber = new Intl.NumberFormat('en-US', {
+				style: 'currency',
+				currency: 'USD',
+				maximumFractionDigits: 0
+			}).format(42);
+			console.log(priceWholeNumber);
+
+			// Display a decimal as a percentage
+			let percent = new Intl.NumberFormat('en-US', {
+				style: 'percent',
+			}).format(0.42);
+			console.log(percent);
+
+			// Format a number as a unit of measure
+			let kilometers = new Intl.NumberFormat('en-US', {
+				style: 'unit',
+				unit: 'kilometer',
+				unitDisplay: 'long'
+			}).format(42);
+			console.log(kilometers);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Locales</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Create an Intl.NumberFormat object for US English
+			let format = new Intl.NumberFormat('en-US');
+
+			// Use the default language
+			let defaultFormat = new Intl.NumberFormat(undefined);
+			let alsoDefaultFormat = new Intl.NumberFormat({});
+		</script>
+	</body>
+</html>

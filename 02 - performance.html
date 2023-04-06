@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Performance</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Do this...
+			let formatCurrency = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+			let price = formatCurrency.format(42);
+			let taxes = formatCurrency.format(5);
+			let total = formatCurrency.format(47);
+
+			// NOT this...
+			let price2 = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(42);
+			let taxes2 = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(5);
+			let total2 = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(47);
+		</script>
+	</body>
+</html>
